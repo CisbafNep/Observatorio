@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="./img/icon-2.png">
+    <title>Observatório - CISBAF</title>
+</head>
+
+<body>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    body{
+      background: var(--bg-cor);
+      color: var(--bg-font);
+    }
+    :root{
+      --bg-cor: #fff;
+      --bg-font: #000;
+      --bg-hdr:#fff;
+    }
+    .light{
+      --bg-cor: #333;
+      --bg-font: #fff;
+      --bg-hdr: #333;
+    }
+  
+    .imag{
+      width: 200px;
+      background: #fff;
+    }
+    header{
+      display: flex;
+      width: 100%;
+      position:fixed;
+      background: var(--bg-hdr);
+      height: 80px;
+      align-items: center;
+      /*border: 1px solid #333;*/
+      box-shadow: 0 0 10px var(--bg-font);
+      justify-content: space-between;
+      padding: 20px;
+      z-index: 1;
+    }
+    header .navbar ul li{
+      position: relative;
+      float: left;
+      list-style: none;
+      cursor: pointer;
+      
+    }
+    header .navbar ul li a{
+      padding: 20px;
+      display: block;
+      color: var(--bg-font);
+      text-decoration: none;
+    }
+    /*header .navbar ul li a:hover{
+      color: var(--bg-font);
+      
+    }*/
+    .btn{
+      border: none;
+      font-size: 20px;
+      background: none;
+    }
+    img{
+      width: 250px;
+    }
+    #imgBG{
+    
+    position: relative;
+    height: 470px;
+    width: 100%;
+    background-image: url(./img/nepdnd.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment:fixed;
+  }
+  #projeto{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 24px 80px ;
+    position: relative;
+  }
+  #objetivo{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 24px 80px 80px;
+    position: relative;
+  }
+  #pic{
+    width: 400px;
+  }
+  .content{
+    display: flex;
+  }
+  main aside{
+    flex: 1;  
+  }
+  main{
+    width: 78vw;
+  }
+ 
+  aside{
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1 1 auto;
+
+  }
+  *{
+    scrollbar-width: thin;
+    scrollbar-color: var(--ytcp-icon-disabled) transparent;
+}
+  aside img{
+    width: 250px;
+    display: grid;
+    border: 1px solid var(--bg-font);
+  }
+  .graph{
+    width: 280px;
+  }
+  .boxSide img{
+    transition: all 0.3s;
+  }
+  @media (max-width: 600px) {
+    main{
+      display: none;
+    }
+    .content{
+      justify-content: center;
+    }
+    aside{
+      align-items: center;
+      justify-content: center;
+    }
+  }
+ 
+  </style>
+  <header>
+    <img class="imag" src="./img/logoRodape.png" alt=""Onmouseover="this.style.transform='scale(1.2)'" Onmouseout="this.style.transform='scale(1)'">
+    <nav class="navbar">
+      <ul>
+       <li><a href="#">HOME</a></li>
+       <li><a href="#">BOLETIM</a></li>
+       <li><a href="#">CONTATOS</a></li>
+       <li><button style="border: none; background: none; font-size: 25px;" onclick="toggleMode()">💡</button></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="imgBG"></div>
+  <div class="content">
+    <main>
+          <section id="projeto">
+            
+            <div>
+              <h1>O Projeto</h1><br>
+              <p>O Observatório de Saúde da Região da Baixada Fluminense, integrante do Consórcio Intermunicipal de Saúde da Baixada Fluminense - CISBAF em parceria com Centro de Estudos e Pesquisa em Saúde Coletiva (CEPESC).</p> <br>
+              <p>Instituído em maio de 2016, tem como propósito promover a análise, estudo e pesquisa dos indicadores de saúde como subsídio para a formulação e avaliação de políticas públicas dos municípios, bem como dos processos de formação e capacitação profissional com o objetivo de apoiar os espaços institucionais para o funcionamento e o aprimoramento contínuo do Sistema Único de Saúde - SUS. Para tanto, realiza estudos nas bases bibliográficas e outras fontes de informação dos bancos de dados oficiais</p>
+            </div>
+            <img id="pic" src="./img/neonep.jpg" width="250px" alt="">
+          </section>
+          <section  id="objetivo">
+            <img id="pic" src="./img/nepdna.jpg" alt="">
+            <div>
+              <h1>Objetivo</h1><br>
+              <p>Organizar, agregar e sistematizar informações, com vistas ao acompanhamento dos indicadores de saúde, permitindo compreender as características epidemiológicas da população da Baixada Fluminense, subsidiando a tomada de decisão. </p>
+            </div>
+            
+          </section>
+          <section id="objetivo">
+            <div>
+              <h1>Objetivos Específicos</h1><br>
+              <p>
+                <ul>
+                  <li>Mapear os agravos prevalentes da Central de Regulação de Urgências Regional da Baixada Fluminense; e</li><br>
+                  <li>Identificar as demandas dos profissionais por educação permanente e oportunizar espaços para experiências formativas problematizadoras.</li>
+                </ul>
+               </p>
+            </div>
+            <img id="pic" src="./img/banner.jpg" alt="">
+            
+          </section>
+        </main>
+        
+        <aside>
+          <br><br>
+            <div class="boxSide">
+              <img src="./img/vacinombox.jpeg" alt="" Onmouseover="this.style.transform='scale(1.2)'" Onmouseout="this.style.transform='scale(1)'"><br><br>
+            <img src="./img/publicientBox.jpeg" alt="" Onmouseover="this.style.transform='scale(1.2)'" Onmouseout="this.style.transform='scale(1)'"><br><br>
+            <img src="./img/projetbox.jpeg" alt="" Onmouseover="this.style.transform='scale(1.2)'" Onmouseout="this.style.transform='scale(1)'">
+            </div><br><br>
+
+            <table style=" text-align: center;"border="1">
+                <tr>
+                  <th>TIPOS DE VIATURAS</th>
+                  <th>QUANTIDADE</th>
+                  
+                </tr>
+                <tr>
+                  <td>USA</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>USB</td>
+                  <td>25</td>
+                </tr>
+                <tr>
+                  <td>FROTA SANITÁRIA</td>
+                  <td>5</td>
+                </tr>
+              </table><br>
+              <img class="graph" src="./img/graph.jpg"  alt="" Onmouseover="this.style.transform='scale(1.2)'" Onmouseout="this.style.transform='scale(1)'">
+              
+        </aside>
+  </div>
+</body>
+<script>
+  function toggleMode(){
+    const html = document.documentElement
+    html.classList.toggle("light")
+  }
+</script>
+</html>
